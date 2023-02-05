@@ -1,0 +1,21 @@
+.register__form{
+    width: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: center;
+    &_message{
+
+        font-size: 12px;
+        background-color: rgba(red, 0.2);
+    }
+    button{
+        margin-top: 20px;
+        margin-right: 0;
+        cursor: pointer;
+    }
+   
+    
+    
+}
