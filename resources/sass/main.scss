@@ -17,6 +17,7 @@ body{
 
 
 .header{
+    margin-top: 10px;
     &__content{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -85,6 +86,7 @@ body{
 }
 
 .main{
+    margin-top: 20px;
     .products{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -93,6 +95,7 @@ body{
         &__card{
             width: 300px;
             padding: 10px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.2s all;
             &:hover{

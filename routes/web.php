@@ -18,6 +18,10 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [ProductController::class, 'homepage']);
 
 Route::post('/login', [UserController::class, 'login']);
+Route::post('/logout',[UserController::class, "logout"]);
 Route::get('/register-form', [UserController::class, 'showRegisterForm']);
 Route::post('/register', [UserController::class, 'register']);
-Route::post('/logout',[UserController::class, "logout"]);
+
+Route::get('/men', [ProductController::class, 'getMenProducts']);
+Route::get('/women', [ProductController::class, 'getWomenProducts']);
+Route::get('/accessories', [ProductController::class, 'getAccessories']);

@@ -1,7 +1,6 @@
 <x-layout>
-    <main class="main">
         <div class="container">
-            <h1 class="main__title">ALL</h1>
+            <h1 class="main__title">{{$category}}</h1>
             <div class="products">
                 @foreach ($data as $el)
                 <div class="products__card">
@@ -18,7 +17,6 @@
                 
             </div>
         </div>
-    </main>
     
     
     

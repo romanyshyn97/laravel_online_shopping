@@ -14,9 +14,9 @@
                  <div class="header__content">
                  <nav class="header__nav" >
                      <ul id="item1">
-                         <li><a href="#">MEN</a> </li>
-                         <li><a href="#">WOMEN</a> </li>
-                         <li><a href="#">ACCESOIRES</a> </li>
+                         <li><a href="/men">MEN</a> </li>
+                         <li><a href="/women">WOMEN</a> </li>
+                         <li><a href="/accessories">ACCESOIRES</a> </li>
                      </ul>
                  </nav>
                  <div class="header__img" id="item2"><a href="/"><img src="images/logo.svg" alt="logo"></a></div>
@@ -50,8 +50,9 @@
              </div>
              </div>
         </header>
-
+        <main class="main">
         {{$slot}}
+        </main>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
