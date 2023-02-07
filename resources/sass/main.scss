@@ -1,6 +1,7 @@
 @import './fonts.scss';
 @import './variables';
 @import './register';
+@import './single-product';
 
 body{
     box-sizing: border-box;
@@ -73,7 +74,7 @@ body{
             margin-right: 10px;
             padding: 5px;
             border: 1px solid black;
-            
+            width: 100%;
             background-color: white;
             &:hover{
                 color: $green;

@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>LaravelShop</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
         @vite('resources/sass/main.scss', 'resources/css/app.css', 'resources/js/app.js')
     </head>
     <body >
@@ -31,16 +32,16 @@
                     @else
                     <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
                     @csrf
-                    <div class="row align-items-center">
-                        <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-                            <input name="loginusername" type="text" placeholder="Username" autocomplete="off" class="form-control form-control-sm input-dark me-5"/>
-                        </div>
-                        <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-                            <input name="loginpassword"type="password" placeholder="Password" class="form-control form-control-sm input-dark mr-5"/>
-                        </div>
-                        <div >
+                    <div class="d-flex align-items-center justify-content-end">
+                        
+                            <input name="loginusername" type="text" placeholder="Username" autocomplete="off" class="form-control form-control-sm input-dark "/>
+                       
+                        
+                            <input name="loginpassword"type="password" placeholder="Password" class="form-control form-control-sm input-dark "/>
+                        
+                        
                             <button class="header__auth_btn">Log In</button>
-                        </div>
+                        
                         <a href="/register-form" class="header__auth_btn">Sign In</a>
                     </div>
                     </form>
@@ -53,7 +54,6 @@
         <main class="main">
         {{$slot}}
         </main>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

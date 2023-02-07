@@ -8,22 +8,27 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
-    public function homepage(Product $images){
-        return view('homepage', ['data' => Product::all(), 'category' => 'All']);
+    public function products(){
+        return view('products', ['data' => Product::all(), 'category' => 'all']);
     }
 
     public function getMenProducts(){
         $product = new Product;
-        return view('homepage', ['data' => $product->where('categories', '=', 'Dla Niego')->get(), 'category' => 'Men']);
+        return view('products', ['data' => $product->where('categories', '=', 'Dla Niego')->get(), 'category' => 'men']);
     }
 
     public function getWomenProducts(){
         $product = new Product;
-        return view('homepage', ['data' => $product->where('categories', '=', 'Dla Niej')->get(), 'category' => 'Women']);
+        return view('products', ['data' => $product->where('categories', '=', 'Dla Niej')->get(), 'category' => 'women']);
     }
 
     public function getAccessories(){
         $product = new Product;
-        return view('homepage', ['data' => $product->where('categories', '=', 'Akcesoria')->get(), 'category' => 'Accesories']);
+        return view('products', ['data' => $product->where('categories', '=', 'Akcesoria')->get(), 'category' => 'accesories']);
+    }
+
+    public function showSingleProduct(Product $product){
+        $products = new Product;
+        return view('single-product', ['data' => $products->where('id', '=', $product->id)->get()]);
     }
 }

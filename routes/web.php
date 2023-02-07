@@ -15,7 +15,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', [ProductController::class, 'homepage']);
+Route::get('/', [ProductController::class, 'products']);
 
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout',[UserController::class, "logout"]);
@@ -25,3 +25,4 @@ Route::post('/register', [UserController::class, 'register']);
 Route::get('/men', [ProductController::class, 'getMenProducts']);
 Route::get('/women', [ProductController::class, 'getWomenProducts']);
 Route::get('/accessories', [ProductController::class, 'getAccessories']);
+Route::get('/{product}', [ProductController::class, 'showSingleProduct']);
