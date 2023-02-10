@@ -42,4 +42,8 @@ class UserController extends Controller
         return redirect('/')->with('success','You are now logged out');
     }
 
+    public function openShoppingCart(){
+        return view('shopping-cart');
+    }
+
 }

@@ -1,5 +1,6 @@
 <x-layout>
     <div class="container">
+      
         <div class="single-product">
             <div class="single-product__img">
                 @php
@@ -28,9 +29,21 @@
             </div>
             <div class="single-product__info">
                 <h2 class="single-product__info_title">{{$data[0]->name}}</h2>
+                @if($data[0]->size)
                 <div class="single-product__info_size">{{$data[0]->size}}</div>
+                @endif
                 <div class="single-product__info_price">{{$data[0]->price}} zł</div>
-                <button class="single-product__info_btn">ADD TO CART</button>
+                @auth
+                <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" value="{{ $data[0]->id }}" name="id">
+                  <input type="hidden" value="{{ $data[0]->name }}" name="name">
+                  <input type="hidden" value="{{ $data[0]->price }}" name="price">
+                  <input type="hidden" value="{{ $data[0]->images }}"  name="image">
+                  <input type="hidden" value="1" name="quantity">
+                  <button class="single-product__info_btn">Add To Cart</button>
+                </form>
+                @endauth
                 <p class="single-product__info_description">{{$data[0]->description}}</p>
             </div> 
         </div>

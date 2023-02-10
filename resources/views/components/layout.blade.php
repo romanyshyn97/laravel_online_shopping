@@ -27,17 +27,18 @@
                         @csrf
                         <button class="header__auth_btn">Sign Out</button>
                     </form>
-                    <div class="header__cart" id="item3"><a href="#"><img src="images/cart.svg" alt="cart"></a></div>
+                    <div class="header__cart" id="item3"><a href="/cart/list"><img src="images/cart.svg" alt="cart"></a></div>
+                    <span class="text-red-700">{{ Cart::getTotalQuantity()}}</span>
                     </div>
                     @else
                     <form action="/login" method="POST" class="mb-0 pt-2 pt-md-0">
                     @csrf
                     <div class="d-flex align-items-center justify-content-end">
                         
-                            <input name="loginusername" type="text" placeholder="Username" autocomplete="off" class="form-control form-control-sm input-dark "/>
+                            <input name="loginusername" type="text" placeholder="Username" autocomplete="off" class="form-control form-control-sm input-dark me-2"/>
                        
                         
-                            <input name="loginpassword"type="password" placeholder="Password" class="form-control form-control-sm input-dark "/>
+                            <input name="loginpassword"type="password" placeholder="Password" class="form-control form-control-sm input-dark me-2"/>
                         
                         
                             <button class="header__auth_btn">Log In</button>
@@ -52,6 +53,13 @@
              </div>
         </header>
         <main class="main">
+                @if(session()->has('success'))
+        <div class="container container--narrow">
+        <div class="alert alert-success text-center">
+            {{session('success')}}
+        </div>
+        </div>
+        @endif
         {{$slot}}
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

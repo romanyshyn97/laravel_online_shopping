@@ -39,13 +39,9 @@
             background-color: $green;
             color: white;
             border: none;
-            &:active{
-                background-color: #4faf69;
-                
-            }
-            &:focus{
-                outline: none;
-            }
+            
+            
+            
         }
     }
 }
